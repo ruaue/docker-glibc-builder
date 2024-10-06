@@ -24,7 +24,7 @@ jobs:
         run: docker build . --tag ruaue/glibc-builder:${{ github.sha }}
 
       - name: Build glibc package
-        run: docker run --rm --env GLIBC_VERSION=2.36 --env STDOUT=1 ruaue/glibc-builder:${{ github.sha }} > artefacts/glibc-bin-2.36-0-$(uname -m).tar.gz
+        run: docker run --rm --env GLIBC_VERSION=2.35 --env STDOUT=1 ruaue/glibc-builder:${{ github.sha }} > artefacts/glibc-bin-2.35-0-$(uname -m).tar.gz
 
       - name: Upload artefacts
         uses: softprops/action-gh-release@v2
@@ -51,7 +51,7 @@ jobs:
         run: docker build . --tag ruaue/glibc-builder:${{ github.sha }}
 
       - name: Build glibc package
-        run: docker run --rm --env GLIBC_VERSION=2.36  --env STDOUT=1 ruaue/glibc-builder:${{ github.sha }} > artefacts/glibc-bin-2.36-0-$(uname -m).tar.gz
+        run: docker run --rm --env GLIBC_VERSION=2.35  --env STDOUT=1 ruaue/glibc-builder:${{ github.sha }} > artefacts/glibc-bin-2.35-0-$(uname -m).tar.gz
 
       - name: Upload artefacts
         uses: softprops/action-gh-release@v2
